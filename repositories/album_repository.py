@@ -13,5 +13,15 @@ def save(album):
     return album
 
 
+def select_all():
+    albums = []
+
+    sql = "SELECT * FROM users"
+    # we don't need to pass any values since we are just retreiving everything
+    results = run_sql(sql)
+
+    # grab our queried result and build Album objects with the dictionary we received back
+    # for row in results:
+    #     album = Album(row['title'], row['genre'], )
 
 
